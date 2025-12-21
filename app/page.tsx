@@ -23,17 +23,18 @@ function AboutContent() {
         Hello, I&apos;m Shaurya Sinha.
       </h1>
       <p className="mt-4 text-lg">
-        Full Stack Developer | TypeScript Enthusiast | Building scalable web applications with modern technologies
+        Full Stack Developer | Machine Learning Engineer | Building scalable applications with modern AI/ML technologies
       </p>
       <div className="mt-5 flex flex-wrap gap-2">
         {[
-          "TypeScript",
           "Python",
-          "React",
+          "TypeScript",
+          "PyTorch",
+          "Transformers",
           "Next.js",
-          "Node.js",
-          "Blockchain",
-          "Web3",
+          "System Design",
+          "NLP",
+          "Diffusion Models",
         ].map((chip) => (
           <span
             key={chip}
@@ -52,31 +53,31 @@ function ProjectsContent() {
   const projects = [
     {
       title: "OceanEYE-Taxa",
-      description: "Marine species identification and taxonomy system using advanced computer vision",
-      tech: ["TypeScript", "Machine Learning", "Computer Vision"],
+      description: "eDNA Based Biodiversity Analysis - Fine-tuned transformer-based sequence model for eDNA taxonomic classification with model pruning and scaling strategies",
+      tech: ["Python", "Transformers", "System Design", "DBMS"],
       status: "Active",
       githubUrl: "https://github.com/Shaurya-Sinha3301/OceanEYE-Taxa",
     },
     {
-      title: "Taxaformer-Final",
-      description: "Advanced transformer-based model for taxonomic classification",
-      tech: ["TypeScript", "Deep Learning", "Transformers"],
-      status: "Completed",
-      githubUrl: "https://github.com/Shaurya-Sinha3301/Taxaformer-Final",
-    },
-    {
-      title: "SecureChain",
-      description: "Blockchain-based secure data management system with MIT license",
-      tech: ["Python", "Blockchain", "Cryptography"],
+      title: "Corrective Diffusion for Cloud Nowcasting",
+      description: "Designed a corrective diffusion framework for spatio-temporal cloud nowcasting, enabling multi-step future prediction of cloud cover patterns",
+      tech: ["Diffusion Models", "PyTorch", "Computer Vision"],
       status: "Active",
-      githubUrl: "https://github.com/Shaurya-Sinha3301/SecureChain",
+      githubUrl: "https://github.com/Shaurya-Sinha3301/Corrective-Diffusion-Cloud-Nowcasting",
     },
     {
-      title: "Taxaformer",
-      description: "Initial implementation of taxonomic transformer architecture",
-      tech: ["TypeScript", "Machine Learning", "Neural Networks"],
-      status: "Completed",
-      githubUrl: "https://github.com/Shaurya-Sinha3301/Taxaformer",
+      title: "Neo-Brutalist Portfolio",
+      description: "Interactive desktop-style portfolio using Next.js App Router, featuring draggable windows, command palette navigation, and modular UI state management",
+      tech: ["Next.js", "TypeScript", "System Design", "p5.js"],
+      status: "Live",
+      githubUrl: "https://github.com/Shaurya-Sinha3301/portfolio",
+    },
+    {
+      title: "MentalMind - Mental Well-being App",
+      description: "Full-stack application to analyze user journal entries and generate emotional well-being insights using advanced NLP and sentiment analysis techniques",
+      tech: ["Python", "NLP", "React", "API Design"],
+      status: "Active",
+      githubUrl: "https://github.com/Shaurya-Sinha3301/MentalMind",
     },
   ];
 
@@ -159,11 +160,11 @@ function ResumeContent() {
     },
     {
       title: "Tech",
-      body: "TypeScript, Python, React, Next.js, Node.js, Blockchain, Web3",
+      body: "Python, PyTorch, Transformers, TypeScript, Next.js, System Design, NLP, Diffusion Models",
     },
     {
       title: "Focus",
-      body: "Machine Learning, Computer Vision, Blockchain Technology, and Scalable Web Applications",
+      body: "Machine Learning, Computer Vision, NLP, Cloud Computing, and Full-Stack Development",
     },
     { title: "Education", body: "Computer Science & Engineering" },
   ];

@@ -6,7 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Shaurya Sinha - Portfolio",
-  description: "Shaurya Sinha's personal portfolio - Full Stack Developer & TypeScript Enthusiast",
+  description: "Shaurya Sinha's portfolio - Machine Learning Engineer & Full Stack Developer specializing in AI/ML applications",
   generator: "v0.app",
 };
 
