@@ -15,7 +15,6 @@ type WindowSpec = {
   content: React.ReactNode;
 };
 
-
 function AboutContent() {
   return (
     <div className="p-5 md:p-6">
@@ -104,6 +103,8 @@ function ProjectsContent() {
                     ? "bg-yellow-200"
                     : project.status === "Planning"
                     ? "bg-blue-200"
+                    : project.status === "Live"
+                    ? "bg-purple-200"
                     : "bg-gray-200"
                 }`}
               >
@@ -184,7 +185,6 @@ function ResumeContent() {
 }
 
 export default function Page() {
-
   const [openApps, setOpenApps] = useState<Exclude<AppKey, "palette" | null>[]>(
     ["about"]
   );
@@ -192,11 +192,9 @@ export default function Page() {
   const setActiveApp = useUIStore((s) => s.setActiveApp);
   const activeApp = useUIStore((s) => s.activeApp);
 
-
   useEffect(() => {
     setActiveApp("about");
   }, [setActiveApp]);
-
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -212,7 +210,6 @@ export default function Page() {
           return;
         }
       }
-
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -264,7 +261,6 @@ export default function Page() {
 
   return (
     <main className="fixed inset-0 overflow-hidden">
-
       <div
         className="absolute inset-0"
         style={{
@@ -276,7 +272,6 @@ export default function Page() {
           backgroundSize: "8px 8px, 8px 8px",
         }}
       />
-
       <div
         className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-30"
         style={{
@@ -286,9 +281,7 @@ export default function Page() {
         }}
       />
 
-
       <Eyes activeApp={activeApp ?? null} />
-
 
       <div className="absolute inset-0 z-10">
         {windows
@@ -310,7 +303,6 @@ export default function Page() {
           })}
       </div>
 
-
       <div className="absolute left-0 right-0 bottom-6 z-20 flex justify-center">
         <Dock
           activeApp={activeApp ?? null}
@@ -321,7 +313,6 @@ export default function Page() {
           }}
         />
       </div>
-
 
       <CommandPalette
         open={paletteOpen}
